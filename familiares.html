@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Registro familiar</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script><link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <header>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span>
+       </label>
+       
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="DatosPersonales.html">Datos Personales</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="paquetes.html">Planes</a></li>
+            <li><a href="registro_familiares.html">Registro Familiares</a></li>
+            <li><a href="familiares.html">Familiares Registrados</a></li>
+            <li><button id="botoncerrar" onclick="cerrar()">Cerrar Sesión</button></li>
+            
+        </ul>
+        
+    </div>
+
+    <div id="logo"> <p>SeQRity</p>
+    </div>
+    </header>
+    
+	<div id="contenido">
+        <div id="cajaarriba">
+	<p id="titulo3">Consulta los datos de tus familiares</p>
+        </div>
+        <div id="cajasecundaria">
+        <table id="menutabla">
+    <p class="sub1">Lista de familiares</p>
+      <thead>
+     <tr id="tabla1">
+       <th scope="col">Nombre</th>
+       <th scope="col">Apellidos</th>
+       <th scope="col">CURP</th>
+       <th scope="col">Acciones</th>
+     </tr>
+   </thead>
+  <tbody id="tabla">
+  </tbody>
+    </table>
+        <div >
+        <p class="sub1">Información personal</p>
+        <div id="cfnombre" class="cajaprueba" >
+        </div>
+        <div id="cfapellido" class="cajaprueba">
+        </div>
+          </div>
+        
+        <div>
+        <div id="cfcurp" class="cajaprueba"></div>
+        <div id="cfedad" class="cajaprueba"></div>        
+        </div>  
+
+        <div>
+        <div id="cfpeso" class="cajaprueba"></div>
+        <div id="cfestatura" class="cajaprueba"></div>        
+        </div>
+
+        <div>
+        <div id="cfgrupo" class="cajaprueba"></div>
+        <div id="cfdonante" class="cajaprueba"></div>        
+        </div>
+        
+        <div>
+        <div id="cfalergias" class="cajaprueba"></div>
+        <div id="cfdesc" class="cajaprueba"></div>  
+        <p class="sub1">Información de contacto</p>
+        <div id="cfdireccion" class="cajaprueba"></div>
+        <div id="cfcp" class="cajaprueba"></div>  
+        <div id="cftel1" class="cajaprueba"></div>     
+        <div id="cftel2" class="cajaprueba"></div>  
+        <p class="sub1">Código QR</p>
+        <div id="qr" class="cajaprueba"></div>             
+        </div>
+         </div>
+        </div>
+        
+    <script src="../js/script.js"></script>
+   <script src="../js/sesion.js"></script>
+ <script src="../js/qrcode.min.js"></script>
+   <script>cargarDatosF();</script>
+     <script>observar();</script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SeQRity</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+           <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+ </script> 
+</head>
+
+<body>
+   <section class="form-login">
+      <form action="" id="formulario" autocomplete="off" >
+      <h5>Iniciar Sesion</h5>
+      <input id="emaillog" class="controls" type="email" name="email" value="" placeholder="Correo Electrónico" required>
+      <input id="passlog" class="controls" type="password" name="Contraseña" value="" placeholder="Contraseña" required>
+      </form>
+      <input type="submit" class="boton2" id="bing" value="Ingresar" 
+      onclick="inicio()">
+      <input type="submit" class="boton2" id="bgg" value="Google"
+      onclick="iniciog()">
+      <p><a href="registrarse.html">Registrate aqui</a></p>
+    </section>
+
+ <script src="../js/script.js"></script>
+  <script src="../js/sesion.js"></script>
+ 
+</body>
+  
+</html>

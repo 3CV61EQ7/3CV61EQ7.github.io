@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Registro familiar</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script><link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <header>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span>
+       </label>
+       
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="DatosPersonales.html">Datos Personales</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="paquetes.html">Planes</a></li>
+            <li><a href="registro_familiares.html">Registro Familiares</a></li>
+            <li><a href="familiares.html">Familiares Registrados</a></li>
+            <li><button id="botoncerrar" onclick="cerrar()">Cerrar Sesión</button></li>
+            
+        </ul>
+        
+    </div>
+
+    <div id="logo"> <p>SeQRity</p>
+    </div>
+    </header>
+	<div id="contenido">
+        <div id="cajaarriba">
+	<p id="titulo3">Completa los datos de tu familiar</p>
+        </div>
+        <div id="cajasecundaria">
+        <p class="sub1">Información básica</p>
+        <form action="" autocomplete="off">
+          <div >
+        <div id="cajaprueba">  <input class="controls" type="text" value="" placeholder="Nombre" required id="fmnombre">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text" value="" placeholder="Apellidos" required id="fmapellido">
+        </div>
+          </div>
+        
+        <div id="cajaprueba">  <input class="controls" type="text"
+         value="" placeholder="CURP" required id="fmCURP">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Edad" required id="fmedad">
+        </div>
+          
+
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Peso" required id="fmpeso">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="estatura" required id="fmestatura">
+        </div>
+        
+
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Grupo Sanguineo" required id="fmgrupo">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Donante de organos" required id="fmdonante">
+        </div>
+        
+
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Alergias" required id="fmalergias">
+         <input class="controls" type="text" value="" placeholder="Descripcion" required id="fmdesc">
+        </div>     
+        </form>
+         <input type="submit" id="breg" value="Guardar"
+      onclick="guardarFm()">  
+         </div>
+        </div>
+        </div>
+    <script src="../js/script.js"></script>
+   <script src="../js/sesion.js"></script>
+    <script>observar();</script>
+  </body>
+</html>

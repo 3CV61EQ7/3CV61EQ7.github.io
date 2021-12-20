@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>SeQRity</title>
+ <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
+ <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <header>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span>
+       </label>
+       
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="DatosPersonales.html">Datos Personales</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="paquetes.html">Planes</a></li>
+            <li><a href="registro_familiares.html">Registro Familiares</a></li>
+            <li><a href="familiares.html">Familiares Registrados</a></li>
+            <li><button id="botoncerrar" onclick="cerrar()">Cerrar Sesión</button></li>
+            
+        </ul>
+        
+    </div>
+
+    <div id="logo"><p>SeQRity</p>
+    </div>
+    </header>
+        
+    
+    </label>   
+	<div id="contenido">
+                
+        <div id="cajaarriba">
+	<h1 id="pftitulo" class="titulo"></h1>
+        </div>
+        <div id="cajasecundaria">
+        <p class="sub1">Información personal</p>
+        <form action="">
+
+        <div >
+        <div id="pfnombre" class="cajaprueba" >
+        </div>
+        <div id="pfapellido" class="cajaprueba">
+        </div>
+          </div>
+        
+        <div>
+        <div id="pfcurp" class="cajaprueba"></div>
+        <div id="pfedad" class="cajaprueba"></div>        
+        </div>  
+
+        <div>
+        <div id="pfpeso" class="cajaprueba"></div>
+        <div id="pfestatura" class="cajaprueba"></div>        
+        </div>
+
+        <div>
+        <div id="pfgrupo" class="cajaprueba"></div>
+        <div id="pfdonante" class="cajaprueba"></div>        
+        </div>
+        
+        <div>
+        <div id="pfalergias" class="cajaprueba"></div>
+        <div id="pfdesc" class="cajaprueba"></div>  
+        <p class="sub1">Información de contacto</p>
+        <div id="pfdireccion" class="cajaprueba"></div>
+        <div id="pfcp" class="cajaprueba"></div>  
+        <div id="pftel1" class="cajaprueba"></div>     
+        <div id="pftel2" class="cajaprueba"></div>  
+        <p class="sub1">Código QR</p>
+        <div id="qr" class="cajaprueba"></div>             
+        </div>
+        </form>
+         </div>
+        </div>
+
+    <script src="../js/script.js"></script>
+   <script src="../js/sesion.js"></script>
+  <script src="../js/qrcode.min.js"></script>
+    <script>cargarDatosPf();</script>
+     <script>observar();</script>
+     
+  </body>
+</html>

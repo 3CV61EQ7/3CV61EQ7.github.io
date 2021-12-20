@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>SeQRity</title>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js">
+    </script>
+  <script
+    src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js">
+    </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+        <header>
+    <input type="checkbox" id="abrir-cerrar" name="abrir-cerrar" value="">
+    <label for="abrir-cerrar">&#9776; <span class="abrir"></span><span class="cerrar"></span>
+       </label>
+       
+    <div id="sidebar" class="sidebar">
+        <ul class="menu">
+            <li><a href="DatosPersonales.html">Datos Personales</a></li>
+            <li><a href="Perfil.html">Perfil</a></li>
+            <li><a href="paquetes.html">Planes</a></li>
+            <li><a href="registro_familiares.html">Registro Familiares</a></li>
+            <li><a href="familiares.html">Familiares Registrados</a></li>
+            <li><button id="botoncerrar" onclick="cerrar()">Cerrar Sesión</button></li>
+            
+        </ul>
+        
+    </div>
+
+    <div id="logo"> <p>SeQRity</p>
+    </div>
+    </header>
+    
+	<div id="contenido">
+        <div id="cajaarriba">
+	<p id="titulo3">Completa tu información</p>
+        </div>
+        <div id="cajasecundaria">
+        <p class="sub1">Información básica</p>
+        <form id="form" action="" autocomplete="off">
+          <div >
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Nombre" required id="dpnombre">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Apellidos" required id="dpapellido">
+        </div>
+          </div>
+        
+        <div id="cajaprueba">  <input class="controls" type="text" value="" placeholder="CURP" required id="dpCURP">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"   placeholder="Edad" required id="dpedad">
+        </div>
+          
+
+        <div id="cajaprueba">  <input class="controls" type="text" placeholder="Peso" required id="dppeso">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="estatura" required id="dpestatura">
+        </div>
+        
+
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Grupo Sanguineo" required id="dpgrupo">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Donante de organos" required id="dpdonante">
+        </div>
+        
+
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Alergias" required id="dpalergias">
+         <input class="controls" type="text"  value="" placeholder="Descripcion" required id="dpdesc">
+        </div>
+        
+        <div id="cajaprueba">
+        <p class="sub1">Informacion de contacto</p>
+        <input class="controls" type="text" value="" placeholder="Direccion" required id="dpdirec">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="C.P" required id="dpcp">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Telefono 1" required id="dptel1">
+        </div>
+        <div id="cajaprueba">  <input class="controls" type="text"  value="" placeholder="Telefono 2" id="dptel2">
+        </div>
+          
+        </form>
+         <input type="submit" id="breg" value="Guardar"
+         onclick="comprobar()">
+         </div>
+        </div>
+        </div>
+    <script src="../js/script.js"></script>
+   <script src="../js/sesion.js"></script>
+     <script>observar();</script>
+  <script>cargarDatosDp();</script>  
+  </body>
+</html>
